@@ -16,16 +16,11 @@ const presentation: Presentation = {
   title: "Hi, I'm Pablo!",
   // profile: "/profile.webp",
   description:
-    `I'm a fullstack developer with a passion for frontend interactions and flashy designs. 
-     Seamlessly blending intuitive design with robust functionality, each project showcases
-     my commitment to excellence and innovation using cutting-edge technologies like Astro, 
-     Vue and React. From responsive layouts to dynamic interactions, I bring websites to life, 
-     while also integrating backend expertise for holistic solutions.`,
+    `I'm a fullstack developer with a passion for frontend interactions and flashy designs. Seamlessly blending intuitive design with robust functionality, each project showcases my commitment to excellence and innovation using cutting-edge technologies like Astro, Vue and React. 
+    <br/>
+    <br/>
+    From responsive layouts to dynamic interactions, I bring websites to life, while also integrating backend expertise for holistic solutions.`,
   socials: [
-    // {
-    //   label: "X",
-    //   link: "https://twitter.com/itsstormzz_",
-    // },
     // {
     //   label: "Bento",
     //   link: "https://bento.me/m-wolff",
