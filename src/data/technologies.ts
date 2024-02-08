@@ -9,36 +9,25 @@ const technologies: Tech[] = [
     logo: "/logos/react.svg",
   },
   {
-    title: "NextJS",
-    logo: "/logos/nextjs.svg",
-  },
-  {
     title: "Astro",
     logo: "/logos/astro.svg",
   },
   {
-    title: "VueJS",
+    title: "Vue",
     logo: "/logos/vue.svg",
+  },
+  {
+    title: "NextJS",
+    logo: "/logos/nextjs.svg",
   },
   {
     title: "p5.js",
     logo: "/logos/p5js.svg",
   },
   {
-    title: "TailwindCSS",
+    title: "Tailwind",
     logo: "/logos/tailwind.svg",
   }
-  // {
-  //   title: "Portfolio / Lina BLIDI",
-  //   techs: ["ReactJS (NextJS)", "TypeScript"],
-  //   link: "https://www.linablidi.fr/",
-  // },
-  // {
-  //   title: "Portfolio / Template",
-  //   techs: ["Astro"],
-  //   link: "/",
-  //   isComingSoon: true,
-  // },
 ];
 
 export default technologies;

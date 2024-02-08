@@ -9,7 +9,7 @@ import vercel from "@astrojs/vercel/serverless";
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), sitemap(), robotsTxt(), react()],
-  // output: "static",
+  output: "static",
   site: SITE_URL,
   server: {
     port: 3000
@@ -21,6 +21,4 @@ export default defineConfig({
       wrap: false
     }
   },
-  output: "server",
-  adapter: vercel()
 });

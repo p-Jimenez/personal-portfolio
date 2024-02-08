@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Syne';
+    src: url('/fonts/Syne.ttf') format('truetype');
+}
+
 .card-bg {
     background-color: rgba(255, 252, 255, 0.03);
 }

@@ -6,6 +6,7 @@ type Social = {
 type Presentation = {
   mail: string;
   title: string;
+  name: string;
   description: string;
   socials: Social[];
   profile?: string;
@@ -13,7 +14,8 @@ type Presentation = {
 
 const presentation: Presentation = {
   mail: "pablo.jimg@gmail.com",
-  title: "Hi, I'm Pablo!",
+  title: "Hi there!",
+  name: "I'm Pablo.",
   // profile: "/profile.webp",
   description:
     `I'm a fullstack developer with a passion for frontend interactions and flashy designs. Seamlessly blending intuitive design with robust functionality, each project showcases my commitment to excellence and innovation using cutting-edge technologies like Astro, Vue and React. 

@@ -21,10 +21,7 @@ import TechnologyCard from "@/components/TechnologyCard.astro";
 
 <Layout>
     <main class="flex flex-col gap-20">
-        <article
-            id="presentation"
-            class="flex flex-col gap-8 md:flex-row-reverse md:justify-end md:gap-12"
-        >
+        <article class="flex flex-col gap-20">
             {
                 presentation.profile && (
                     <Image
@@ -37,77 +34,62 @@ import TechnologyCard from "@/components/TechnologyCard.astro";
                 )
             }
 
-            <div class="flex flex-col gap-8">
-                <h1 class="text-3xl text-neutral-100">
+            <div class="hidden lg:flex flex-row items-center gap-20">
+                <h1 class="text-[182px] font-semibold text-neutral-100">
                     {presentation.title}
                 </h1>
 
-                <h2
-                    class="w-auto max-w-[60ch] leading-6"
-                    set:html={convertAsteriskToStrongTag(
-                        presentation.description
-                    )}
-                />
+                <img src="/star.svg" alt="star" class="h-36 w-36" />
+                <!-- <SocialLinks /> -->
+            </div>
 
-                <SocialLinks />
+            <div class="text-end text-[182px] font-semibold text-neutral-100">
+                {presentation.name}
             </div>
         </article>
 
-        <!-- <article class="flex flex-col gap-8">
-      <header class="flex w-full flex-row justify-between gap-2">
-        <h3 class="text-lg text-neutral-100">Latest posts</h3>
-        <Link href="/posts" label="See all posts" isUnderline target="_self" />
-      </header>
-      {posts.length === 0 && <p>Soon, stay connected 👀...</p>}
+        <hr class="mt-12 border-secondary opacity-[0.30]" />
 
-      <section class="flex flex-col gap-4 md:flex-row md:flex-wrap">
-        {
-          posts.length !== 0 &&
-            posts
-              .slice(0, 2)
-              .map((post) => (
-                <PostCard
-                  publishedAt={post.data.publishedAt}
-                  title={post.data.title}
-                  description={post.data.description}
-                  slug={post.slug}
-                />
-              ))
-        }
-      </section>
-    </article> -->
+        <article id="presentation" class="flex flex-col gap-8">
+            <h3 class="text-lg font-semibold uppercase text-primary">
+                Technologies
+            </h3>
+
+            <p
+                class="w-auto max-w-[60ch] text-2xl leading-6 text-secondary"
+                set:html={convertAsteriskToStrongTag(presentation.description)}
+            />
+        </article>
+
+        <hr class="mt-12 border-secondary opacity-[0.30]" />
 
         <article class="flex flex-col gap-8" id="technologies">
             <header class="flex w-full flex-row justify-between gap-2">
-                <h3 class="text-lg text-neutral-100">Technologies</h3>
+                <h3 class="text-lg font-semibold uppercase text-primary">
+                    Technologies
+                </h3>
             </header>
 
-            <section class="grid grid-cols-3 gap-12">
+            <section class="grid lg:grid-cols-3 md:grid-cols-2 gap-12">
                 {
                     technologies.map((technology) => (
-                        // <div class="flex flex-col gap-2">
-                        //     <h4 class="text-neutral-100">{technology.title}</h4>
-                        //     <img
-                        //         src={technology.logo}
-                        //         alt={technology.title}
-                        //         class="h-12 w-12"
-                        //     />
-                        // </div>
                         <TechnologyCard tech={technology} />
                     ))
                 }
             </section>
         </article>
 
+        <hr class="mt-12 border-secondary opacity-[0.30]" />
+
         <article class="flex flex-col gap-8" id="projects">
             <header class="flex w-full flex-row justify-between gap-2">
-                <h3 class="text-lg text-neutral-100">
-                    Selected projects ({projects.length})
+                <h3 class="text-lg font-semibold uppercase text-primary">
+                    Projects
                 </h3>
             </header>
             {projects.length === 0 && <p>Oops, I must work^^^^^</p>}
 
-            <section class="flex flex-col gap-4">
+            <section class="grid md:grid-cols-2 gap-8">
                 {
                     projects.length !== 0 &&
                         projects.map((project) => <ProjectCard {...project} />)
