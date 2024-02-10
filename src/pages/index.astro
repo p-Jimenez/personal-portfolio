@@ -20,8 +20,8 @@ import TechnologyCard from "@/components/TechnologyCard.astro";
 ---
 
 <Layout>
-    <main class="flex flex-col gap-20">
-        <article class="flex flex-col gap-20">
+    <main class="flex flex-col gap-20" id="scrollspy">
+        <article class="flex flex-col gap-8 md:gap-20">
             {
                 presentation.profile && (
                     <Image
@@ -34,25 +34,25 @@ import TechnologyCard from "@/components/TechnologyCard.astro";
                 )
             }
 
-            <div class="hidden lg:flex flex-row items-center gap-20">
-                <h1 class="text-[182px] font-semibold text-neutral-100">
+            <div class="flex flex-col sm:flex-row items-center gap-2 md:gap-20">
+                <h1 class="text-5xl sm:text-8xl lg:text-9xl xl:text-[182px] font-semibold text-neutral-100">
                     {presentation.title}
                 </h1>
 
-                <img src="/star.svg" alt="star" class="h-36 w-36" />
-                <!-- <SocialLinks /> -->
+                <img src="/star.svg" alt="star" class="sm:inline h-20 w-20 lg:h-36 lg:w-36" />
+                
             </div>
 
-            <div class="text-end text-[182px] font-semibold text-neutral-100">
+            <div class="text-center sm:text-end text-5xl sm:text-8xl lg:text-9xl xl:text-[182px] font-semibold text-neutral-100">
                 {presentation.name}
             </div>
         </article>
 
-        <hr class="mt-12 border-secondary opacity-[0.30]" />
+        <hr class="md:mt-12 border-secondary opacity-[0.30]" />
 
-        <article id="presentation" class="flex flex-col gap-8">
+        <article id="about" class="flex flex-col gap-8">
             <h3 class="text-lg font-semibold uppercase text-primary">
-                Technologies
+              About
             </h3>
 
             <p

@@ -1,52 +1,39 @@
 ---
 import removeTrailingSlash from "@/utils/removeTrailingSlash";
 import presentation from "@/data/presentation";
+import LinkButton from "./LinkButton.astro";
+import MenuButton from "./MenuButton.astro";
 
 const pathname = removeTrailingSlash(Astro.url.pathname);
 ---
 
-<style>
-  .active-scrollspy {
-    color: var(--color-neutral-100);
-  }
-</style>
+<header
+    class="card-bg sticky top-8 z-40 flex w-full items-center gap-2 rounded-lg px-6 py-4 backdrop-blur transition-colors duration-500 md:flex-row md:justify-between"
+>
+    <!-- class="card-bg z-40 flex w-full flex-col gap-2 rounded-lg px-6 py-4 md:flex-row md:justify-between items-center fixed top-0" -->
+    <nav role="navigation">
+        <ul role="list" class="hidden flex-row gap-6 text-secondary md:flex">
+            <li>
+                <a href="#about" class="font-[400] hover:text-primary">About</a>
+            </li>
+            <li>
+                <a href="#technologies" class="hover:text-primary"
+                    >Technologies</a
+                >
+            </li>
+            <li>
+                <a href="#projects" class="hover:text-primary">Projects</a>
+            </li>
+        </ul>
 
-<header class="z-40 flex w-full flex-col gap-2 md:flex-row md:justify-between">
-  <a href={`mailto:${presentation.mail}`} class="hover:text-neutral-100"
-    >{presentation.mail}</a
-  >
+        <MenuButton className="flex md:hidden"/>
+    </nav>
 
-  <nav role="navigation">
-    <ul role="list" class="flex flex-row gap-2">
-      <li>
-        <a
-          href="#about"
-          data-to-scrollspy-id="about"
-          class:list={{
-            ["hover:text-neutral-100"]: true,
-          }}>About</a
-        >
-      </li>
-      <li>/</li>
-      <li>
-        <a
-          href="#technologies"
-          data-to-scrollspy-id="technologies"
-          class:list={{
-            ["hover:text-neutral-100"]: true,
-          }}>Technologies</a
-        >
-      </li>
-      <li>/</li>
-      <li>
-        <a
-          href="#projects"
-          data-to-scrollspy-id="projects"
-          class:list={{
-            ["hover:text-neutral-100"]: true,
-          }}>Projects</a
-        >
-      </li>
-    </ul>
-  </nav>
+    <!-- <a href={`mailto:${presentation.mail}`} class="bg-secondary text-black px-4 py-2 rounded-lg font-bold hidden md:block"
+        >{presentation.mail}</a
+    > -->
+
+    <LinkButton href={`mailto:${presentation.mail}`} className="hidden md:block">
+        {presentation.mail}
+    </Link>
 </header>
