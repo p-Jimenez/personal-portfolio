@@ -4,16 +4,20 @@ type Props = {
     className?: string;
     target?: string;
     rel?: string;
+    invert?: boolean;
 };
 
-const { href, className, target, rel } = Astro.props;
+const { href, className, target, rel, invert } = Astro.props;
+
+const buttonClass = invert ? 'bg-neutral-950 text-secondary' : 'bg-secondary text-neutral-950';
+
 ---
 
 <a
     href={href}
     target={target}
     rel={rel}
-    class={`rounded-lg bg-secondary px-4 py-1 font-bold text-black ${className}`}
+    class={`rounded-lg px-4 py-2 font-bold ${buttonClass} ${className}`}
 >
     <slot />
 </a>

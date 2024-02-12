@@ -1,0 +1,13 @@
+---
+const currentYear = new Date().getFullYear();
+import presentation from "@/data/presentation";
+---
+
+<footer
+    class="flex items-center justify-center bg-neutral-950 py-4 text-secondary px-10"
+>
+    <div class="flex w-full max-w-[1440px] items-center justify-between">
+        <span>© {presentation.fullname.toLocaleLowerCase()}</span>
+        <span>{currentYear}</span>
+    </div>
+</footer>

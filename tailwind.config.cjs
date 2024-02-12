@@ -5,15 +5,14 @@ const colors = require("tailwindcss/colors");
 module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
-    colors: {
-      ...colors,
-      primary: "#C5ACDA",
-      secondary: "#FFFCE1"
-    },
     extend: {
       fontFamily: {
         sans: ["var(--font-syne)", ...defaultTheme.fontFamily.sans],
       },
+      colors: {
+        primary: "#C5ACDA",
+        secondary: "#FFFCE1"
+      }
     },
   },
 };

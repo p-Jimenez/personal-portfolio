@@ -1,0 +1,35 @@
+---
+import LinkButton from "./LinkButton.astro";
+
+import presentation from "@/data/presentation";
+
+---
+
+<div class="flex items-center justify-center bg-secondary text-neutral-950 py-20 px-10">
+    <div class="w-full max-w-[1440px] p-4">
+        <div class="max-w-[740px] flex flex-col gap-8">
+            <h1 class="text-7xl font-bold">
+                Hey! There's much more to what I do.
+            </h1>
+            
+            <h2 class="text-3xl">
+                Let's get in contact to discuss future projects, collaborations, events or just chat about dev nerd stuff!
+            </h2>
+
+            <div>
+                <LinkButton invert href={`mailto:${presentation.mail}`} rel="noopener noreferrer" target="_blank">
+                    Get in touch
+                </LinkButton>
+            </div>
+        </div>
+    </div>
+    <div class="absolute right-0">
+
+        <img
+        src="/big-star.svg"
+        alt="big star"
+        class="pt-16 hidden xl:block"
+        loading="lazy"
+        />
+    </div>
+</div>

@@ -5,6 +5,7 @@ type Social = {
 
 type Presentation = {
   mail: string;
+  fullname: string;
   title: string;
   name: string;
   description: string;
@@ -14,6 +15,7 @@ type Presentation = {
 
 const presentation: Presentation = {
   mail: "pablo.jimg@gmail.com",
+  fullname: "Pablo Jiménez",
   title: "Hi there!",
   name: "I'm Pablo.",
   // profile: "/profile.webp",
